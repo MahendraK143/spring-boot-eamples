@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping(value = "employee")
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
 public class EmployeeController {
     private static final Logger LOGGER = LoggerFactory.getLogger(EmployeeController.class);
     @Autowired
@@ -57,7 +57,7 @@ public class EmployeeController {
 //            }
 //                
 //        });
-
+        LOGGER.info("emp list{}",employees);
         return new ResponseEntity<List<Employee>>(employees, HttpStatus.OK);
     }
 
